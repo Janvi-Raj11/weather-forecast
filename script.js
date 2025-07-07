@@ -1,5 +1,5 @@
 document.getElementById("getWeather").addEventListener("click", () => {
-    const location = document.getElementById("locationInput").value.trim();
+  const location = document.getElementById("locationInput").value.trim().toLowerCase();
     const resultDiv = document.getElementById("result");
   
     if (!location) {   //the input is empty, it shows an error message and stops the code from continuing.
@@ -9,7 +9,8 @@ document.getElementById("getWeather").addEventListener("click", () => {
   
     const apiKey = "7eb2df9bd4584b5ea4d214905250505";
     const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${encodeURIComponent(location)}&aqi=yes`;
-  
+    resultDiv.innerHTML = `<p>Loading…</p>`;
+
     fetch(apiUrl)
       .then(response => {
         if (!response.ok) {
@@ -26,7 +27,7 @@ document.getElementById("getWeather").addEventListener("click", () => {
         `;
       })
       .catch(error => {
-        resultDiv.innerHTML = `<p style="color:red;">Error: ${error.message}</p>`;
+        resultDiv.innerHTML = `<p style="color:red;">Oops! ${error.message}. Please check the city name.</p>`;
         console.error(error);
       });
   });
