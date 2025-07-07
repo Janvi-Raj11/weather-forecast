@@ -4,7 +4,7 @@ A simple weather web application that lets users check the current weather condi
 
 ##  Live Demo
 
- [Click here to try the app](https://janvi-raj11.github.io/weather-app/)  
+ [Click here to try the app](https://janvi-raj11.github.io/weather-forecast/)  
 
 ##  Technologies Used
 - HTML
@@ -27,4 +27,4 @@ A simple weather web application that lets users check the current weather condi
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Janvi-Raj11/weather-app.git
+   git clone https://github.com/Janvi-Raj11/weather-forecast.git
